@@ -1,0 +1,7 @@
+Initial cost: 105.574051
+Iteration 0: cost = 105.574051, w = 3.486, b = 2.113
+Iteration 1: cost = 29.876537, w = 3.227, b = 2.040
+...
+Iteration 99: cost = 0.000006, w = 2.000, b = 0.000
+--------------------
+Final weights: w = 2.000000, b = 0.000000
