@@ -1,0 +1,4 @@
+﻿  1 neuron.cpp
+C:\Users\Farhan\machine learning\model 1\modelwithc\1 neuron.cpp(34,15): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\Farhan\machine learning\model 1\modelwithc\1 neuron.cpp(35,16): warning C4305: 'initializing': truncation from 'double' to 'float'
+  modelwithc.vcxproj -> C:\Users\Farhan\machine learning\model 1\modelwithc\x64\Debug\1 neuron.exe
