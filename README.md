@@ -1,40 +1,65 @@
-# machine-learning
+# Single Neuron Implementation in C
 
-# Linear Regression Gradient Descent Example
-
-This project demonstrates a simple implementation of linear regression using gradient descent in C. The code attempts to find the best-fitting line (`y = w * x + b`) that minimizes the mean squared error given a set of training data.
-
-## Table of Contents
-- [Overview](#overview)
-- [Code Structure](#code-structure)
-- [Compilation](#compilation)
-- [Usage](#usage)
-- [Example Output](#example-output)
-
+This project implements a simple single neuron model in C, demonstrating basic concepts of machine learning, particularly linear regression. The neuron learns to fit a line to a given dataset through gradient descent.
 
 ## Overview
 
-This program implements a basic linear regression model using gradient descent. The goal is to minimize the cost function, which is the mean squared error between the predicted `y` values and the actual `y` values in the training data.
+The model uses a basic dataset that represents a linear relationship between two variables. The goal is to find the optimal weights (`w`) and bias (`b`) for the linear equation:
 
-## Code Structure
+\[ y = wx + b \]
 
-- `train`: A 2D array that holds the training data, where each row represents a pair of `(x, y)` values.
-- `rand_float`: A function that generates a random floating-point number between 0 and 1.
-- `cost`: A function that calculates the mean squared error for a given weight `w` and bias `b`.
-- `main`: The main function where gradient descent is applied to optimize `w` and `b`.
+where:
+- `x` is the input feature.
+- `y` is the target output.
 
-### Functions
+## Dataset
 
-- `rand_float`: Generates a random floating-point number between 0 and 1.
-- `cost`: Computes the mean squared error (MSE) for given weights `w` and `b`.
+The dataset used for training consists of the following points:
 
-### Gradient Descent
+| x | y |
+|---|---|
+| 0 | 0 |
+| 1 | 2 |
+| 2 | 4 |
+| 3 | 6 |
+| 4 | 8 |
 
-Gradient descent is performed over 100 iterations. In each iteration, the weights `w` and `b` are adjusted by computing the partial derivatives of the cost function with respect to `w` and `b`, and then updating them using a small learning rate.
+This dataset represents a perfect linear relationship where `y` is double the value of `x`.
 
-## Compilation
+## Features
 
-To compile the code, use the following command:
+- Random initialization of weights and biases.
+- Calculation of cost function (mean squared error).
+- Gradient descent for optimizing weights and bias.
+- Iterative updates to minimize the cost function.
 
-```bash
-gcc -o linear_regression main.c
+## Installation
+
+To compile and run the project, ensure you have a C compiler installed. You can use `gcc` or any other C compiler.
+
+1. Clone the repository (if applicable):
+2. gh repo clone artyviz/machine-learning
+
+3. Compile the program:gcc -o single_neuron single_neuron.c
+Usage
+Run the compiled program:./single_neuron
+
+The program will output the initial cost and iterate through 100 steps of gradient descent, printing the cost, weights, and bias at each iteration. At the end of the training, it will display the final weights and bias.
+
+#OUTPUT
+
+Initial cost: 7.624557
+Iteration 0: cost = 7.624557, w = 0.085921, b = 4.342233
+...
+Iteration 99: cost = 6.007603, w = 0.432014, b = 4.175984
+--------------------
+Final weights: w = 0.432014, b = 4.175984
+
+Conclusion
+This simple implementation serves as a foundational example of how a neuron can be trained to predict values based on a linear relationship. It can be extended with more complex datasets and features.
+
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+Author: Farhan
+
